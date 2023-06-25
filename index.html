@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script defer src="predict.js" type="module"></script>
+    <title>Welke pokemon is het?</title>
+</head>
+
+<body>
+    <div>
+        <h2>Predict welke pokemon het is</h2>
+        <input type="text" id="type1" placeholder="Type 1" />
+        <input type="text" id="type2" placeholder="Type 2" />
+        <input type="text" id="Attack" placeholder="Attack" />
+        <input type="text" id="Defense" placeholder="Defense" />
+        <button id="predictBtn">Welke Pokemon is het?</button>
+    </div>
+
+    <div id="result"></div>
+</body>
+
+</html>
