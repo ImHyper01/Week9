@@ -1,9 +1,46 @@
 h2 {
     text-align: center;
-    
+    border: 7px inset #4e7a6a;
+    border-radius: 4px;
+    background-color: rgba(41, 175, 184, 0.63);
+    width: 40%;
+    margin-left: 30%;
 }
 
 input {
+    border: 7px;
     margin-left: 41.2%;
 }
 
+body{
+    background-color: #28282B
+}
+
+.result {
+    margin-left: 41.2%;
+    font-size: large;
+    font-weight: bold;
+    border: inset #4e7a6a;
+    width: 17%;
+    background: rgba(41, 184, 172, 0.534);
+   
+}
+
+button{
+    cursor: pointer;
+}
+
+.box {
+    margin: auto;
+    width: 70%;
+    height: 100px;
+    padding: 10px;
+    border: 5px inset #4e7a6a;
+    border-radius: 10px;
+    background-color: #cbc873;
+}
+
+input{
+    background-color: rgb(255, 255, 255);
+    border: inset
+}
