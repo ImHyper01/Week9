@@ -1,8 +1,6 @@
 const predictButton = document.getElementById('predictBtn').addEventListener("click", function() {makePrediction()});
-const typeOneInput = document.getElementById('type1');
-const typeTwoInput = document.getElementById('type2');
-const attackInput = document.getElementById('Attack');
-const defenseInput =document.getElementById('Defense');
+const yearsExperienceInput = document.getElementById('YearsExperience');
+
 
 const nn = ml5.neuralNetwork({ task: 'regression', debug: true })
 nn.load('./model/model.json', modelLoaded)
@@ -13,14 +11,16 @@ function modelLoaded() {
 
 async function makePrediction() {
     const predictionValues = {
-        typeOne: parseInt(typeOneInput.value, 10),
-        typeTwo: parseInt(typeTwoInput.value, 10),
-        Attack: parseInt(attackInput.value, 10),
-        Defense: parseInt(defenseInput.value, 10)
+        yearsExperience: parseInt(yearsExperienceInput.value),
     }
 
     const results = await nn.predict(predictionValues);
-    console.log(`De pokemon is ${results[0].Name}`)
+    console.log(`Het salaris is ${results[0].Salary}`)
 
-    
+    currencyTransformer(results[0].Sakary);
+}
+
+function currencyTransformer(result) {
+    const fmt = new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' });
+    resultField.innerHTML = "Het salaris is " + fmt.format(result);
 }

@@ -1,0 +1,1 @@
+{"inputUnits":[1],"outputUnits":1,"inputs":{"YearsExperience":{"dtype":"number","min":1.2000000000000002,"max":10.6}},"outputs":{"Salary":{"dtype":"number","min":37732,"max":121873}},"isNormalized":true}
